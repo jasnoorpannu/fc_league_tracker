@@ -1,5 +1,5 @@
-opencv-python
-pytesseract
-numpy
-pandas
-
+groq==1.0.0
+opencv-python==4.13.0.90
+pandas==3.0.0
+pillow==12.1.0
+pytesseract==0.3.13

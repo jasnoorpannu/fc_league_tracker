@@ -11,12 +11,21 @@ from pathlib import Path
 
 from groq import Groq
 
-# Groq API configuration - set GROQ_API_KEY environment variable
+# Load .env file if present
+env_path = Path(__file__).parent.parent / ".env"
+if env_path.exists():
+    with open(env_path) as f:
+        for line in f:
+            if "=" in line and not line.startswith("#"):
+                key, val = line.strip().split("=", 1)
+                os.environ.setdefault(key, val)
+
+# Groq API configuration
 API_KEY = os.environ.get("GROQ_API_KEY")
 MODEL = "meta-llama/llama-4-maverick-17b-128e-instruct"
 
 if not API_KEY:
-    raise ValueError("GROQ_API_KEY environment variable not set. Run: export GROQ_API_KEY='your_key'")
+    raise ValueError("GROQ_API_KEY not set. Create .env file or run: export GROQ_API_KEY='your_key'")
 
 
 def encode_image(image_path: str) -> str:

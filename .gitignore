@@ -27,3 +27,4 @@ Thumbs.db
 
 # Secrets (API keys should be env vars in production)
 # Note: llm/llm_extract.py contains hardcoded API key - consider using env vars
+.env
