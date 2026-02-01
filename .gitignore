@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+screenshots/
+debug_rows/
+output/
+screen_size.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets (API keys should be env vars in production)
+# Note: llm/llm_extract.py contains hardcoded API key - consider using env vars
