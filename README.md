@@ -54,8 +54,8 @@ python run_llm.py
 Results saved to `output/league_members_llm.csv`:
 ```csv
 rank,name,ovr,activity
-1,TREK,125,6245
-2,Dan,121,6185
+1,Player1,125,6245
+2,Player2,121,6185
 ...
 ```
 
